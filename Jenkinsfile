@@ -60,6 +60,7 @@ pipeline {
     post {
         always {
             junit testResults: 'jest-results/junit.xml', skipPublishingChecks: true
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'playwright HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 }
