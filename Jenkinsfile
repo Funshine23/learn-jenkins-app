@@ -49,7 +49,7 @@ pipeline {
                 sh '''
                     npm install serve
                     node_modules/.bin/serve -s build &
-                    sleep 60
+                    sleep 10
                     npx playwright install chromium
                     npx playwright test
                 '''
