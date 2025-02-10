@@ -23,8 +23,6 @@ pipeline {
             }
         }
         
-
-        /*
         stage('Tests') {
             parallel {
                 //Test Build
@@ -73,6 +71,5 @@ pipeline {
                 }
             }
         }   
-        */
     }
 }
