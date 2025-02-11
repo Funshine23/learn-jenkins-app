@@ -101,7 +101,8 @@ pipeline {
                     image 'mcr.microsoft.com/playwright:v1.50.1-noble'
                     reuseNode true
                     //args '-u root:root'
-                }
+                }                
+            }
 
             environment {        
                 CI_ENVIRONMENT_URL = 'https://transcendent-pixie-ae9eac.netlify.app'
