@@ -38,6 +38,7 @@ pipeline {
                     }
                     steps { 
                         sh '''
+                            echo 'Start Unit Testing'
                             test -f build/index.html
                             npm test
                         '''
@@ -59,6 +60,7 @@ pipeline {
                     }
                     steps { 
                         sh '''
+                            echo 'Start E2E Testing'
                             npm install serve
                             node_modules/.bin/serve -s build &
                             sleep 10
